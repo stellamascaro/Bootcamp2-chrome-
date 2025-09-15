@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opções — Bootcamp Helper</title>
+<link rel="stylesheet" href="../styles/global.css">
+</head>
+<body>
+<h2>Opções da Extensão</h2>
+<label>
+<input type="checkbox" id="enableFeature"> Habilitar destaque automático
+</label>
+
+
+<script>
+const cb = document.getElementById('enableFeature');
+(async () => {
+const data = await chrome.storage.local.get(['enableFeature']);
+cb.checked = !!data.enableFeature;
+})();
+cb.addEventListener('change', async () => {
+await chrome.storage.local.set({ enableFeature: cb.checked });
+});
+</script>
+</body>
+</html>
