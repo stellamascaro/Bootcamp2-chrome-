@@ -16,7 +16,7 @@
 "background": {
 "service_worker": "service-worker.js"
 },
-"permissions": ["storage","tabs"],
+"permissions": ["alarms","storage","tabs"],
 "host_permissions": ["https://developer.chrome.com/*"],
 "content_scripts": [
 {
