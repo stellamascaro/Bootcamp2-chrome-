@@ -14,7 +14,7 @@
 "default_popup": "src/popup/popup.html"
 },
 "background": {
-"service_worker": "src/background/service-worker.js"
+"service_worker": "service-worker.js"
 },
 "permissions": ["storage","tabs"],
 "host_permissions": ["https://developer.chrome.com/*"],
